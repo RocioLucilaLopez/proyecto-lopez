@@ -1,14 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from './components/NavBar';
+
+import './styles.css';
+import NavBar from './components/NavBar/NavBar.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
         <NavBar />
-        </p>
       </header>
     </div>
   );
