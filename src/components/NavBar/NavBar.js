@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
 import CartWidget from './CartWidget';
+import logo from "./logo.png"
 
 
 function NavBar() {
@@ -8,8 +9,8 @@ function NavBar() {
         <div>
             <Navbar expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home"> FENIX BARCELONA</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Brand href="#home"><img src= {logo} alt="logo" className='logo'/></Navbar.Brand>
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#home">Inicio</Nav.Link>

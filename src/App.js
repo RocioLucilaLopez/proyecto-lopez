@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
         <NavBar />
       </header>
-        <ItemListContainer greeting="Hola soy Itemlist" />
+        <ItemListContainer greeting="Indumentaria sustentable" />
         <CounterApp />
     </div>
         
