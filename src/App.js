@@ -3,6 +3,7 @@ import './styles.css';
 import NavBar from './components/NavBar/NavBar.js';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import CounterApp from './components/Counter/CounterApp';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
  
 
@@ -14,6 +15,7 @@ function App() {
         <NavBar />
       </header>
         <ItemListContainer greeting="Indumentaria sustentable" />
+        <ItemDetailContainer />
         <CounterApp />
     </div>
         
