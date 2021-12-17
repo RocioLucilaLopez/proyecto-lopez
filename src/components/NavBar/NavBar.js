@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'; //para enrutar sin que se refresque la página
 import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
 import CartWidget from './CartWidget';
 import logo from "./logo.png"
@@ -10,10 +11,10 @@ function NavBar() {
             <Navbar expand="lg">
                 <Container>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Brand href="#home"><img src= {logo} alt="logo" className='logo'/></Navbar.Brand>
+                    <Link to= "/"><img src= {logo} alt="logo" className='logo'/></Link>
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Inicio</Nav.Link>
+                        <Link to="/">Inicio</Link>
                         <Nav.Link href="#link">Nuestros valores</Nav.Link>
                         <NavDropdown title="Productos" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Accesorio</NavDropdown.Item>
@@ -24,6 +25,7 @@ function NavBar() {
                       </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
+                <Link to="/Cart">Carrito</Link>
                 <CartWidget/>
               </Container>
             </Navbar>

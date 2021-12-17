@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      <h1>Enterizas</h1>
+      <h1>Enteriza Barcelona</h1>
       <ItemDetail item={item} />
     </div>
   );
