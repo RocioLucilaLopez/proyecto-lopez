@@ -4,8 +4,7 @@ const Item = ({prod}) => {
   return (
       <div 
               key={prod.id}
-              className='col-md-4'
-          >                        
+              className='col-md-4 col-lg-4'>                        
               <div className="card w-100 mt-5" >
                   <div className="card-header">
                       {`${prod.name}`}

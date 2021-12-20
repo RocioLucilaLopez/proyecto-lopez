@@ -1,10 +1,10 @@
+
 const products = [
-        {"id":1, "name":"Bikers", "price":1500, "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Imagen_no_disponible.svg/240px-Imagen_no_disponible.svg.png", "stock":6},
-        {"id":2, "name":"Remerones", "price":2000, "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Imagen_no_disponible.svg/240px-Imagen_no_disponible.svg.png", "stock":1},
-        {"id":3, "name":"Bikini", "price":3500, "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Imagen_no_disponible.svg/240px-Imagen_no_disponible.svg.png", "stock":2},
-        {"id":4, "name":"Bolsito ", "price":2500, "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Imagen_no_disponible.svg/240px-Imagen_no_disponible.svg.png", "stock":1},
-        {"id":5, "name":"Tops", "price":1800, "imgUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Imagen_no_disponible.svg/240px-Imagen_no_disponible.svg.png", "stock":11},
-      ]
+    { id: 1,imgUrl:"https://cdn.shopify.com/s/files/1/0573/5373/2274/products/Camiseta_Fantastik_540x.jpg?v=1636286406" ,Categoria: 'remeras', name: "Remera FANTASTIC", price: 2500 },
+    { id: 2,imgUrl:"https://cdn.shopify.com/s/files/1/0573/5373/2274/products/CamisetaDiosa_540x.jpg?v=1636049989" ,Categoria: 'remeras', name: "Remera DIOSA", price: 2500 },
+    { id: 3,imgUrl:"https://cdn.shopify.com/s/files/1/0573/5373/2274/products/BikerMarronFrente_1024x1024@2x.jpg?v=1636049989" ,Categoria: 'leggins', name: "biker mostaza", price: 1800 },
+    { id: 4,imgUrl:"https://cdn.shopify.com/s/files/1/0573/5373/2274/files/image00007_360x.jpg?v=1636299310" ,Categoria: 'leggins', name: "biker verde", price: 1800 },
+];
 
 export const getFetch = new Promise((resolve)=>{
 //promise tiene dos parametros, uso solo uno en este caso, para simular un delay en la carga-
@@ -12,3 +12,6 @@ export const getFetch = new Promise((resolve)=>{
         resolve(products) //acá ejecutamos acciones, pueden ser asincronicas o no.
     }, 3000)
 }) 
+
+
+

@@ -14,14 +14,18 @@ function App() {
             <div className="App">
               <header className="App-header">
                 <NavBar />
-              </header>
-                 <Routes> //le damos la ruta que tiene que seguir
+              </header>  
+                 <Routes>
                     <Route 
-                        exact path="/" element={ <ItemListContainer greeting='hola soy ItemListContainer que vengo de app' />} 
+                        exact 
+                        path="/categoria/:idCategoria" 
+                        element={ <ItemListContainer greeting='hola soy ItemListContainer que vengo de app' />} 
                     />
-                      <Route 
-                          exact path="/cart" element={ <Cart  />} 
-                      />          
+                    <Route 
+                          exact 
+                          path="/cart" 
+                          element={ <Cart  />} 
+                    />        
                  </Routes> 
                 <ItemListContainer greeting="Indumentaria sustentable" />
                 <ItemDetailContainer />
