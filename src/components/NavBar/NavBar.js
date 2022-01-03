@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link} from 'react-router-dom'; //para enrutar sin que se refresque la página. Pinta ruta en url
 import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
-import CartWidget from './CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import logo from "./logo.png"
 
 
@@ -14,17 +14,14 @@ function NavBar() {
                     <Link to= "/"><img src= {logo} alt="logo" className='logo'/></Link>
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Link to="/">Inicio</Link>
-                        <Nav.Link href="#link">Nuestros valores</Nav.Link>  
+                        <Link to="/all">Inicio</Link>
                         <NavDropdown title="Productos" id="basic-nav-dropdown">
-                        <Link className='' to="/categoria/leggins">leggins</Link>
+                        <Link to="/category/leggins">Leggins</Link>
                         <NavDropdown.Divider />
-                        <Link className='' to="/categoria/remeras">remeras</Link>
-
+                        <Link to="/category/remeras">Remeras</Link>
                       </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
-                <Link to="/Cart">Carrito</Link>
                 <CartWidget/>
               </Container>
             </Navbar>

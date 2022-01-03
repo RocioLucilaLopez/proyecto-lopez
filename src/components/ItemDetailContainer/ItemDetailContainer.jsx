@@ -1,20 +1,32 @@
 import { useState, useEffect } from "react";
-import getProducto from "../Producto/Producto";
+import { useParams } from "react-router-dom";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
-  const [item, setItem] = useState([]);
-  console.log("item", item);
+  const [loading, setLoading] = useState(true)
+  const [product, setProduct] = useState({})
+  const {idProd} = useParams()
 
   useEffect(() => {
-    getProducto.then((res) => setItem(res)).catch((err) => console.log(err));
-  });
-
+    const db = getFirestore();
+    const queryProduct = doc(db, `productos/${idProd}`);
+    getDoc(queryProduct).then(resp => {
+      setProduct({id: resp.id, ...resp.data()}); 
+      setLoading(false);
+    })
+  }, [idProd]);
+  
   return (
-    <div>
-      <h1>Enteriza Barcelona</h1>
-      <ItemDetail item={item} />
-    </div>
-  );
+    <>
+         {loading ? 
+                <h2>Cargando...</h2>
+            :
+                <div className='border border-3 border-secondary'>
+                    <ItemDetail product={product} />                        
+                </div>
+        }            
+    </>
+)
 };
 export default ItemDetailContainer;
