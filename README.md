@@ -5,7 +5,7 @@ Proyecto realizado con ReactJs para e-commerce dedicado a la venta de indumentar
 
 ## Demo del proyecto
 
-[Fenix Barcelona](https://drive.google.com/file/d/1qGWLJcSW9NYfDiuaQYvCP_HhbaXhiiKr/view?usp=sharing)
+[Fenix Barcelona](https://rociolucilalopez.github.io/proyecto-lopez/)
 
 
 ## Autor
