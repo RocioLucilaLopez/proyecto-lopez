@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link} from 'react-router-dom'; //para enrutar sin que se refresque la página. Pinta ruta en url
+import { Link} from 'react-router-dom';
 import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
 import CartWidget from '../CartWidget/CartWidget';
 import logo from "./logo.png"

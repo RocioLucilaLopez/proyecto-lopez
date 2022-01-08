@@ -8,7 +8,7 @@ const Item = memo(({product}) => {
       <img src={product.image} alt="Imagen de producto" className="imgCardProduct"/>
       <h3 className="nameProduct">{product.name}</h3>
       <h3 className="priceProduct">$ {product.price}</h3>
-      <Link to={`/details/${product.description}`}><button className='btnVerMas' >Detalles</button></Link>
+      <Link to={`/details/${product.id}`}><button className='btnVerMas' >Detalles</button></Link>
       <hr/>
     </div>
   )

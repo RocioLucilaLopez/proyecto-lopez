@@ -12,7 +12,7 @@ const Cart = () => {
       {cartList < 1 ? (
         <>
           <p>No hay productos en el carrito</p>
-          <Link to="/all">Volver a la tienda</Link>
+          <Link to="/all"><button className="backStore">Volver a la tienda</button></Link>
         </>
       ) : (
         <>
@@ -30,16 +30,15 @@ const Cart = () => {
               {cartList.map((product) => (
                 <tr key={product.id}>
                   <td>
-                    <img
+                    <img className="d-flex flex-column align-items-center imgCartProduct"
                       src={product.image}
-                      alt={product.name}
-                      width="50rem"
-                      height="50rem"
+                      alt={product.name}  
+                      
                     />
                   </td>
-                  <td>{product.price}</td>
+                  <td>${product.price}</td>
                   <td>{product.quantity}</td>
-                  <td>{product.quantity * product.price}</td>
+                  <td>${product.quantity * product.price}</td>
                   <td>
                     <button
                       onClick={() => deleteFromCart(product)}
@@ -54,7 +53,7 @@ const Cart = () => {
           </table>
           <button onClick={removeFromCart}>Vaciar carrito</button>
           <p>Total: ${totalCart()}</p>
-          <Link to="/checkout">Terminar compra</Link>
+          <Link to="/checkout"><button>Terminar compra</button></Link>
         </>
       )}
     </main>

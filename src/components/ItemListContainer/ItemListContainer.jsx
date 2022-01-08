@@ -1,5 +1,5 @@
 import {useState, useEffect, memo} from "react";
-import { useParams} from "react-router-dom"; //Importo useParams para capturar el parametro que paso en el path de la Route
+import { useParams} from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import {collection, getDocs, getFirestore, query, where } from  "firebase/firestore";
 
@@ -11,12 +11,16 @@ const ItemListContainer = memo(({nameCategory, greetings}) => {
     const {idCategory} = useParams();
 
     useEffect(() => {
+      
     const db = getFirestore();
     if(idCategory) {
-      const queryProducts = query(collection(db, 'productos'), where('category', '==', idCategory));
+      const queryProducts = query(collection(db, 'productos'),
+      where('category', '==', idCategory));
+
       getDocs(queryProducts)
       .then(resp => { setProducts( resp.docs.map(product => ({id: product.id, ...product.data()}))); 
       setLoading(false); })
+
     } else {
       const queryProducts = collection(db, 'productos');
       getDocs(queryProducts)
